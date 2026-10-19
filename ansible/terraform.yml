@@ -1,0 +1,13 @@
+---
+- name: Generate Terraform variables from the encrypted vault
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Render terraform/secrets.auto.tfvars
+      ansible.builtin.template:
+        src: templates/secrets.auto.tfvars.j2
+        dest: "{{ playbook_dir }}/../terraform/secrets.auto.tfvars"
+        mode: "0600"
+      no_log: true

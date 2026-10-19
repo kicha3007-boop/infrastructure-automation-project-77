@@ -1,0 +1,10 @@
+# Пароль ansible-vault и всё, что из него сгенерировано
+.vault_pass
+terraform/secrets.auto.tfvars
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform.tfstate.lock.info
+terraform/backend.secrets.hcl
